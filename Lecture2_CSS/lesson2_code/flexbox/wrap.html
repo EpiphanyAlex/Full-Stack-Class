@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 600px;
+            /* In flexbox, the default child element does not break lines, 
+            if the container can not fit, it will compress the width of the child element */
+            background-color: skyblue;
+            display: flex;
+            /* flex-wrap will realize the effect of responsive, according to the container automatically break lines */
+            flex-wrap: wrap;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            color: white;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">hello world</div>
+        <div class="box">hello world</div>
+        <div class="box">hello world</div>
+        <div class="box">hello world</div>
+        <div class="box">hello world</div>

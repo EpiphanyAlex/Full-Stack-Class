@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>背景颜色</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+      }
+      /* 给box1设置宽高200px，背景色蓝色 */
+      .box1 {
+        background-color: blue;
+      }
+      /* 给box2添加背景logo图，宽高300px， 不平铺*/
+      .box2 {
+        background-image: url(images/logo.png);
+        background-repeat: no-repeat; /* 不设置的话，默认是平铺 */
+      }
+
+      /* 给box3添加背景logo图，添加背景色黄色，沿着y轴平铺 */
+      .box3 {
+        background-image: url(images/logo.png);
+        background-color: yellow;
+        background-repeat: repeat-y;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box1 box">box1</div>
+    <div class="box2 box">box2</div>
+    <div class="box3 box">box2</div>
+  </body>
+</html>
