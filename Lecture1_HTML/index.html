@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- The current page takes the html5 version to display the page, 
+ which must be in the first line, the document type declaration tag -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The viewport tag is used to set the viewport of the page, 
+    which is used to display the page correctly on different devices -->
+    <!-- width=device-width means the width of the page is the width of the device -->
+    <!-- initial-scale=1.0 means the initial zoom level of the page is 1.0, 
+    which means the page is not zoomed in or out -->
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- The link tag is used to link the CSS file to the HTML file -->
+</head>
+<body>
+    <header>
+        <h1>Tech Gear</h1>
+        <nav aria-label="Main navigation">
+        <!-- The nav tag is used to create a navigation menu -->
+        <!-- The aria-label attribute is used to provide a label for the navigation, 
+        which is used by screen readers to describe the navigation -->
+            <ul class="nav-list">
+            <!-- The ul tag is used to create an unordered list -->
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- The li tag is used to create a list item 
+                 and the li tag must be a child of the ul tag-->
+                <!-- The a tag is used to create a link to another page -->
+                <!-- The href attribute is used to specify the URL of the link -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <h2>Innovative Tech Gadgets</h2>
+            <p>Explore our latest range of tech gear designed for performance and style.</p>
+        </section>
+        <section id="products" class="products" aria-label="Product list">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Wireless Headphones" />
+                    <!-- The img tag is used to display an image -->
+                    <!-- The alt attribute is used to provide a text description of the image, 
+                    which is used by screen readers to describe the image -->
+                    <h3>Wireless Headphones</h3>
+                    <p>High-quality sound with noise cancellation.</p>
+                    <button type="button" aria-label="Buy Wireless Headphones">Buy Now</button>
+                </article>
+                <article class="card">                    
+                    <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=300&q=80" alt="Smart Watch" />
+                    <h3>Smart Watch</h3>
+                    <p>Track your health and stay connected on the go.</p>
+                    <button type="button" aria-label="Buy Smart Watch">Buy Now</button>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Portable Speaker" />
+                    <h3>Portable Speaker</h3>
+                    <p>Crystal-clear sound in a compact design.</p>
+                    <button type="button" aria-label="Buy Portable Speaker">Buy Now</button>
+                </article>
+            </div>
+        </section>
+        <section id="about" class="about" aria-label="About Tech Gear">
+            <h2>About Us</h2>
+            <p>We are passionate about creating innovative tech products that enhance your lifestyle.</p>
+        </section>
+        <section id="contact" class="contact" aria-label="Contact heading">
+            <h2>Get in Touch</h2>
+            <p>Have a question or want to work together? Send us a message below and we'll get back to you!</p>
+            <form class="contact-form" aria-label="Contact form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <!-- label and input id must match -->
+                <div>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                </div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Tech Gear. All rights reserved.</p>
+    </footer>
+</body>
+</html>

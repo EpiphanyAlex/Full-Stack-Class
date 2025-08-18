@@ -1,0 +1,215 @@
+ * {
+    /* Remove default margin and padding */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box-sizing: border-box; means the width and height of the element includes the padding and border */
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    /* color ratio*/
+    padding: 1rem;
+    /* 1rem is calculated according to the font size of the root element (html), and it is a relative unit */
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    /* text-align: center; is used to center the text in the header */
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.nav-list {
+    display: flex;
+    /* display: flex; is used to display the list items in a row by default */
+    justify-content: center;
+    /* justify-content: center; is used to center the list items in the row */
+    list-style: none;
+    /* list-style: none; is used to remove the default list style */
+    gap: 1rem;
+    /* gap: 1rem; is used to add a gap between the list items */
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    /* text-decoration: none; is used to remove the default underline from the links */
+    font-weight: 600;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    outline-offset: 2px;
+    outline-color: #0077cc;
+    outline-style: solid;
+    /* Support accessibility, keep the focus visible */
+}
+
+.hero {
+    background-color: #e0eaff;
+    padding: 2rem 1rem;
+    /* 2rem is the padding on the top and bottom, 1rem is the padding on the left and right */
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    /* border-radius: 8px; is used to round the corners of the element */
+}
+
+.products {
+    padding: 2rem 0;
+}
+
+.product-grid {
+    display: grid;
+    /* display: grid; is used to create a grid layout */
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); creates a responsive grid that adjusts the number of columns based on the available space */
+    /* minmax(250px, 1fr) means each column will have a minimum width of 250px and a maximum width of 1 fraction of the available space */   
+}
+
+.card {
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); adds a subtle shadow to the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    /* object-fit: cover; is used to ensure the image covers the entire area of the image container */
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    color:#222;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.card button {
+    padding: 0.6rem 1rem;
+    background-color: #0077cc;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    /* cursor: pointer; changes the cursor to a pointer when hovering over the button */
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    /* transition: background-color 0.3s ease; adds a smooth transition effect when the background color changes */
+}
+
+.card button:hover,
+.card button:focus {
+    background-color: #005fa3;
+    /* Changes the background color of the button on hover */
+    outline-offset: 2px;
+    outline-color: #005fa3;
+    outline-style: solid;
+}
+
+.about {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact {
+    background-color: #f8f8f8;
+    padding: 4rem, 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form label {
+    font-weight: 600;
+    color: #333;
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.contact form button {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+    background-color: #005fa3;
+    outline-offset: 2px;
+    outline-color: #005fa3;
+    outline-style: solid;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #222;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+        /* Changes the navigation list to a column layout on smaller screens */
+        gap: 0.5rem;
+    }
+}
