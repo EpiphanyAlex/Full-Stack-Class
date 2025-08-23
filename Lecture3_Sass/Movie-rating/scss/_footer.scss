@@ -1,0 +1,37 @@
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 2rem;
+
+    .footer-container {
+        display: flex;
+        justify-content: space-around; /* Distribute columns evenly */
+        margin: 0 auto; /* Center the container */
+        max-width: 1000px;
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            h4 {
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            a {
+                color: #ccc;
+                text-decoration: none; /* Remove underline */
+                font-size: 0.9rem;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column; /* Stack columns on smaller screens */
+            gap: 2rem;
+        }
+    }
+}

@@ -122,4 +122,39 @@ header nav ul li a:hover {
 }
 .btn.btn-secondary:hover {
   background-color: rgb(30.1449275362, 125.8550724638, 52);
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 2rem;
+}
+.footer .footer-container {
+  display: flex;
+  justify-content: space-around; /* Distribute columns evenly */
+  margin: 0 auto; /* Center the container */
+  max-width: 1000px;
+}
+.footer .footer-container .footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer .footer-container .footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.footer .footer-container .footer-column a {
+  color: #ccc;
+  text-decoration: none; /* Remove underline */
+  font-size: 0.9rem;
+}
+.footer .footer-container .footer-column a:hover {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .footer .footer-container {
+    flex-direction: column; /* Stack columns on smaller screens */
+    gap: 2rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
