@@ -1,0 +1,10 @@
+.btn {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    &.btn-primary {
+        @include button-style(#0077ff, #fff);
+    }
+    &.btn-secondary {
+        @include button-style(#28a745, #fff);
+    }
+}

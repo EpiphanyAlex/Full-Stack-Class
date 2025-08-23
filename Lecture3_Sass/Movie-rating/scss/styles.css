@@ -1,0 +1,125 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  color: white;
+  background-color: #1e3a8a;
+}
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+header nav ul li a:hover {
+  background-color: #facc15;
+  color: #1e3a8a;
+}
+
+.hero {
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero::before {
+  content: "";
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80") center/cover no-repeat;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+.hero h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.movies .movie-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 132px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.movies .movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  padding: 32px;
+}
+.movies .movie-card img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 8px;
+}
+.movies .movie-card h3 {
+  font-size: 1.3rem;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+.movies .movie-card .rating {
+  font-size: 1.3rem;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+.movies .movie-card p {
+  color: #333;
+}
+
+.btn {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.btn.btn-primary {
+  background-color: #0077ff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn.btn-primary:hover {
+  background-color: rgb(0, 95.2, 204);
+}
+.btn.btn-secondary {
+  background-color: #28a745;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn.btn-secondary:hover {
+  background-color: rgb(30.1449275362, 125.8550724638, 52);
+}/*# sourceMappingURL=styles.css.map */

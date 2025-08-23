@@ -1,0 +1,30 @@
+header {
+    @include flex-center;
+    justify-content: space-between;
+    padding: $spacing-md $spacing-lg;
+    color: white;
+    background-color: $primary-color;
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    nav ul {
+        @include flex-center;
+        gap: $spacing-md;
+        list-style: none; // Remove default list styles
+        li a {
+            color: white;
+            text-decoration: none; // Remove default text decoration
+            padding: $spacing-sm $spacing-md;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            
+            &:hover { //& represents the parent selector
+                background-color: $secondary-color;
+                color: $primary-color;
+        }
+        }
+    }
+}

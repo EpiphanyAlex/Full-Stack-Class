@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grandparent {
+            width: 800px;
+            height: 800px;
+            background-color: aqua;
+            padding: 50px;
+            /* position: relative; This makes the grandparent a positioned ancestor */
+        }
+        .parent {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+            position: relative; /* This makes the parent a positioned ancestor */
+        }
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute; /* The child is positioned absolutely based on the parent */
+            top: 30px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

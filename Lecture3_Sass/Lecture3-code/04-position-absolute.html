@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            position: absolute; 
+            /* refer to the nearest positioned ancestor, but the parent box is not positioned.
+            The child will be positioned based on <Body> */
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+        </div>
+    </div>
+</body>
+</html>

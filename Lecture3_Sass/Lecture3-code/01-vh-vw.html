@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-vh-vw {
+            width: 10vw; /* 10% of the viewport width */
+            height: 10vh; /* 10% of the viewport height */
+            background-color: red
+        }
+        /* % calculated by referring to the width and height of the parent element */
+        .div-vh-vw-child {
+            width: 50%; /* 50% of the parent element's width, which is 5vw */
+            height: 50%; /* 50% of the parent element's height, which is 5vh */
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-vh-vw">
+        <div class="div-vh-vw-child"></div>
+    </div>
+</body>
+</html>

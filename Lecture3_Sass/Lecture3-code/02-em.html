@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* The font-size of a child element using em as the unit is calculated with reference to the parent element's font-size */
+        /* The width, height, padding, and margin in em is calculated with reference to the element's own font-size */
+        .parent {
+            font-size: 40px;
+            width: 10em; /* 10 times the font-size of the parent element, which is 400px */
+            height: 10em;
+        }
+        .child {
+            font-size: 0.5em; /* 0.5 times the font-size of the parent element, which is 20px */
+            width: 10em; /* 10 times the font-size of the child element, which is 200px */
+            height: 10em;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        Parent
+        <div class="child">
+            Child
+            <div class="grandchild">
+                Grandchild
+            </div>
+        </div>
+    </div>
+</body>
+</html>

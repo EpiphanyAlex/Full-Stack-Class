@@ -1,0 +1,23 @@
+.hero {
+    position: relative; // Used to position the pseudo-element 'before' (child element)
+    height: 300px;
+    @include flex-center;
+    color: $text-color;
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    // semi-transparent background image
+    &::before {
+        content: '';
+        background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80') center / cover no-repeat;
+        position: absolute; // Position relative to the hero section
+        inset: 0; // Shortcut for top, right, bottom, left = 0
+        z-index: -1; // Place the background behind the text
+        opacity: 0.5;
+    }
+
+    h1 {
+        position: relative;
+        z-index: 1; // Place the text above the background
+    }
+}
