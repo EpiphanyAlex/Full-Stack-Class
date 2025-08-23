@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between; /* Aligns items to the edges */
+    align-items: center;
+    padding: 12px 18px;
+}
+
+.nav-header-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header-profile {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header .logo {
+    width: 116px;
+    height: 30px;
+}
+
+.nav-header .nav-link {
+    margin: 0 8px;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.nav-header .nav-link:hover {
+    background-color: rgb(255, 87, 87);
+    color: white;
+    border: 1px solid black;
+}
+
+.nav-search-icon {
+    margin-right: 12px;
+}
+
+.nav-header .btn-sign-in {
+    margin: 0 8px;
+    padding: 6px 12px;
+    border: 1px solid black;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.nav-header .btn-sign-up {
+    margin: 0 8px;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(255, 87, 87);
+    color: white;
+}
+
+.nav-header .btn-sign-in:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px rgba(0, 0, 0, 1);
+}
+
+.nav-header .btn-sign-up:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px rgba(0, 0, 0, 1);
+    border: 1px solid black;
+}
+
+.banner {
+    
+}

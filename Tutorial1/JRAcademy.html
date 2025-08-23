@@ -8,33 +8,36 @@
 </head>
 <body>
     <!-- Navigation bar section -->
-    <header>
-        <!-- alt text for image, supporting screen readers -->
-        <img src="https://jracademy.com.au/image/jr-academy-logo.svg" alt="JR Logo" width="116px" height="30px">
-        <button>Home</button>
-        <button>Bootcamps</button>
-        <button>About</button>
-        <button>Contact</button>
-        <select name="language" id="language">
-            <!-- Default option is disabled and selected -->
-            <option value="default" selected disabled>Language</option>
-            <option value="en">English</option>
-            <option value="fr">French</option>
-            <option value="sp">Spanish</option>
-        </select>
-        <!-- target="_blank" opens the link in a new tab -->
-        <a href="/search" target="_blank">
-            <img src="https://jracademy.com.au/icon/nav-search-icon.svg" alt="Search Icon">
-        </a>
-        <button>Sign In</button>
-        <button>Sign up</button>
+    <header class="nav-header">
+        <div class="nav-header-menu">
+            <!-- alt text for image, supporting screen readers -->
+            <img class="logo" src="https://jracademy.com.au/image/jr-academy-logo.svg" alt="JR Logo">
+            <button class="nav-link">Home</button>
+            <button class="nav-link">Bootcamps</button>
+            <button class="nav-link">About</button>
+            <button class="nav-link">Contact</button>
+            <select name="language" id="language">
+                <!-- Default option is disabled and selected -->
+                <option value="default" selected disabled>Language</option>
+                <option value="en">English</option>
+                <option value="ch">中文</option>
+            </select>
+        </div>
+        <div class="nav-header-profile">
+            <!-- target="_blank" opens the link in a new tab -->
+            <a href="/search" target="_blank">
+                <img class="nav-search-icon" src="https://jracademy.com.au/icon/nav-search-icon.svg" alt="Search Icon">
+            </a>
+            <button class="btn-sign-in">Sign In</button>
+            <button class="btn-sign-up">Sign up</button>
+        </div>
     </header>
 
     <!-- Banner section -->
-    <section>
+    <section class="banner">
         <!-- An inline-block element displays on one line like an inline element, 
          and can set its width, height, and inner and outer margins like a block element. -->
-        <div style="display: inline-block; width: 50%;">
+        <div class="banner-content" style="display: inline-block; width: 50%;">
             <h1>JR Academy</h1>
             <h2>Launch Your First Australian Tech Job</h2>
             <p>
