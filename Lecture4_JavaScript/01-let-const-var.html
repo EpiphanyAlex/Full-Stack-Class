@@ -4,6 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        // var hoisting
+        console.log('test', testVar); // undefined
+        var testVar = 'hello';
+        // var repeated declarations
+        var user = 'ben';
+        var user = 'chris';
+        // var global scope: window.name, window.location
+        // var local scope: function scope
+        function fn() {
+            var num1 = 20;
+            console.log('num1', num1); // 20
+        }
+        fn();
+        // console.log('num1', num1); // ReferenceError: num1 is not defined
+        // var within '{}', such as if, for, while, switch, does not have block scope
+        if(true) {
+            var a = 1;
+        }
+        console.log('a', a); // 1, because var does not have block scope
+
+        // let const temporal dead zone
+        // console.log('age', age); // ReferenceError: age is not defined
+        let age = 20;
+        console.log('age', age); // 20
+        // let const have block scope
+        if(true) {
+            let x = 10;
+            const y = 20;
+            console.log('x', x); // 10
+            console.log('y', y); // 20
+        }
+        // console.log('x', x); // ReferenceError: x is not defined
+        // console.log('y', y); // ReferenceError: y is not defined
+
+        // The value declared with const cannot be changed
+        const gender = 'male';
+        // gender = 'female'; // TypeError: Assignment to constant variable.
+    </script>
 </head>
 <body>
     

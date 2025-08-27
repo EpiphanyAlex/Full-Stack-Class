@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // return terminates the function and can return a value
+        function getSum(num1, num2) {
+            return num1 + num2;
+            alert("Hello"); // This line will never be executed
+        }
+        getSum(1, 2); // 3
+
+        // Only return one value
+        function getValue(num1, num2) {
+            return num1, num2; // The result returned is the last value
+        }
+        console.log(getValue(1, 2)); // 2
+
+        // If a function does not have a return statement, it returns 'undefined' by default
+        // If a function has a return statement, it must return a value
+        function fn() {
+            let value = 'Hello'
+        }
+        let result = fn();
+        console.log(result); // undefined, because fn does not return a value
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
