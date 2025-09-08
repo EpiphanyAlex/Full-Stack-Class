@@ -16,12 +16,13 @@
             <button class="nav-link">Bootcamps</button>
             <button class="nav-link">About</button>
             <button class="nav-link">Contact</button>
-            <select name="language" id="language">
-                <!-- Default option is disabled and selected -->
-                <option value="default" selected disabled>Language</option>
-                <option value="en">English</option>
-                <option value="ch">中文</option>
-            </select>
+            <div class="language-dropdown">
+                <button class="language-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">Language ▾</button>
+                <ul class="language-menu" role="listbox">
+                    <li role="option" data-lang="en">English</li>
+                    <li role="option" data-lang="ch">中文</li>
+                </ul>
+            </div>
         </div>
         <div class="nav-header-profile">
             <!-- target="_blank" opens the link in a new tab -->
@@ -32,6 +33,32 @@
             <button class="btn-sign-up">Sign up</button>
         </div>
     </header>
+    <script>
+    // simple toggle behavior for the custom language dropdown
+    (function(){
+        const dropdown = document.querySelector('.language-dropdown');
+        const toggle = document.querySelector('.language-toggle');
+        const menu = document.querySelector('.language-menu');
+        if(!dropdown || !toggle || !menu) return;
+        toggle.addEventListener('click', function(){
+            const isOpen = dropdown.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        menu.addEventListener('click', function(e){
+            const item = e.target.closest('li');
+            if(!item) return;
+            toggle.textContent = item.textContent + ' ▾';
+            dropdown.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+        document.addEventListener('click', function(e){
+            if(!dropdown.contains(e.target)){
+                dropdown.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    })();
+    </script>
 
     <!-- Banner section -->
     <section class="banner">

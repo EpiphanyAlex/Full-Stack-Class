@@ -75,6 +75,55 @@
     border: 1px solid black;
 }
 
+/* Language dropdown styled similar to buttons */
+.language-dropdown {
+    position: relative;
+    margin: 0 8px;
+}
+
+.language-toggle {
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.language-toggle:hover {
+    background-color: rgb(255, 87, 87);
+    color: white;
+    border: 1px solid black;
+}
+
+.language-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 140px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    padding: 8px 0;
+    list-style: none;
+    display: none;
+    z-index: 1000; /* ensure menu is on top without covering trigger */
+}
+
+.language-dropdown.open .language-menu {
+    display: block;
+}
+
+.language-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.language-menu li:hover {
+    background-color: #f5f5f5;
+}
+
 .banner {
     
 }
