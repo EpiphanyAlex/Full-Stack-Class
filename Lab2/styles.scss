@@ -1,0 +1,74 @@
+$spacing-unit:40px;
+$small-spacing:20px;
+$extra-small-spacing:10px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #303032;
+}
+
+main {
+    display: grid;
+    // Define a 14-column grid: 1 column for left margin, 12 columns for content, 1 column for right margin
+    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: $spacing-unit;
+    padding: $spacing-unit 0;
+}
+
+.cards {
+    // Make the cards container span all 12 columns and start from the 2nd column
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px));
+    grid-gap: $spacing-unit;
+}
+
+.card {
+    // Each card spans 4 columns
+    grid-column-end: span 4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        transform: translateY(-8px);
+    }
+    &__image-container {
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        grid-column-end: span 6;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        grid-gap: $small-spacing;
+        .card {
+            grid-column-end: span 12;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        grid-gap: $extra-small-spacing;
+        grid-template-columns: $extra-small-spacing repeat(6, 1fr) $extra-small-spacing;
+        .cards {
+            grid-column: 2 / span 6;
+            grid-template-columns: repeat(6, 1fr);
+            .card {
+                grid-column-end: span 6;
+            }
+        }
+    }
+}
